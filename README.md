@@ -29,7 +29,7 @@ Connections    10
 ## Network Addressing Scheme
 
 The network uses three separate LAN subnets connected through two WAN links.
-```
+
 Location      | Network Address  | Default Gateway
 Head Office   | 192.168.1.0/24   | 192.168.1.1
 Branch Office | 192.168.2.0/24   | 192.168.2.1
@@ -148,5 +148,3 @@ The reported ping tests completed successfully with no packet loss in the tested
 This project strengthened my understanding of how multiple office networks can communicate through interconnected routers and switches. It also improved my troubleshooting skills by providing hands-on experience identifying and resolving a routing problem.
 
 #### This is part of my ongoing practical learning journey in networking
-
-```
