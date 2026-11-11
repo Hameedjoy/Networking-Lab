@@ -14,6 +14,7 @@ The objective was to establish communication between devices across all three lo
 
 ## Network Topology
 
+Click the image below to view the full network diagram.
 [Three-Site Enterprise Network Topology](network-topology.jpg)
 
 # Network components:
