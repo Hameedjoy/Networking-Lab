@@ -118,14 +118,14 @@ After adding the route, the ping test from R-Warehouse to the Head Office WAN in
 Ping tests were performed to verify communication between the three office networks.
 
 ## Successful tests included:
-
+```
   Head Office PC to both Branch Office PCs. 
   Head Office PC to both Warehouse PCs.
   Both Warehouse PCs to the Head Office PC.
   Branch Office PCs to the Warehouse PCs.
   Warehouse PC 1 to both Branch Office PCs.
   Warehouse PC 2 to both Branch Office PCs.
-
+```
 The reported ping tests completed successfully with no packet loss in the tested connections.
 
 
