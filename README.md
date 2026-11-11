@@ -6,9 +6,9 @@ This project involves designing, configuring, and testing a three-site enterpris
 
 ## The network connects three locations:
 
-Head Office
-Branch Office
-Warehouse
+Head Office,
+Branch Office,
+Warehouse.
 
 The objective was to establish communication between devices across all three locations using routers, switches, IP addressing, and static routing. This project provided practical experience in network design, router configuration, IP addressing, routing, connectivity testing, and troubleshooting.
 
