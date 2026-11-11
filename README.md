@@ -18,23 +18,23 @@ Click the image to view the full network diagram.
 [Three-Site Enterprise Network Topology](network-topology.jpg)
 
 # Network components:
-
+```
 Component  | Quantity
 Routers         3
 Switches        3
 PCs             5
 Total devices  11
 Connections    10
-
+```
 ## Network Addressing Scheme
 
 The network uses three separate LAN subnets connected through two WAN links.
-
+```
 Location      | Network Address  | Default Gateway
 Head Office   | 192.168.1.0/24   | 192.168.1.1
 Branch Office | 192.168.2.0/24   | 192.168.2.1
 Warehouse     | 192.168.3.0/24   | 192.168.3.1
-
+```
 ## WAN Addressing
 
 WAN Link             | Network      | Router Interface Addresses
