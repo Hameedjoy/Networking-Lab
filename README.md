@@ -6,9 +6,9 @@ This project involves designing, configuring, and testing a three-site enterpris
 
 ## The network connects three locations:
 
-- Head Office
-- Branch Office
-- Warehouse
+1 Head Office
+2 Branch Office
+3 Warehouse
 
 The objective was to establish communication between devices across all three locations using routers, switches, IP addressing, and static routing. This project provided practical experience in network design, router configuration, IP addressing, routing, connectivity testing, and troubleshooting.
 
@@ -36,58 +36,58 @@ Branch Office | 192.168.2.0/24   | 192.168.2.1
 Warehouse     | 192.168.3.0/24   | 192.168.3.1
 ```
 ## WAN Addressing
-
+```
 WAN Link             | Network      | Router Interface Addresses
 Head Office – Branch | 10.0.12.0/30 | 10.0.12.1 and 10.0.12.2
 Branch – Warehouse   | 10.0.23.0/30 | 10.0.23.2 and 10.0.23.1
-
+```
 Subnet mask for both WAN links: "255.255.255.252"
 
 # Router Interface Configuration
 
 ## Head Office Router (R-HQ)
-
+```
 Interface  | IP Address        |     Purpose
 Gi0/0      | 192.168.1.1/24    | Head Office LAN
 Gi0/1      | 10.0.12.1/30      | WAN connection to Branch
-
+```
 ## Branch Office Router (Router-2)
-
+```
 Interface  | IP Address      | Purpose
 Gi0/0      | 192.168.2.1/24  | Branch LAN
 Gi0/1      | 10.0.12.2/30    | WAN connection to Head Office
 Gi0/2      | 10.0.23.2/30    | WAN connection to Warehouse
-
+```
 ## Warehouse Router (R-Warehouse)
-
+```
 Interface | IP Address     | Purpose
 Gi0/0     | 10.0.23.1/30   | WAN connection to Branch
 Gi0/1     | 192.168.3.1/24 | Warehouse LAN
-
+```
 # Static Routing Configuration
 
 Static routes were configured to allow the three locations to communicate with one another.
 
 ## R-HQ
-
+```
 Destination Network | Next Hop
 192.168.2.0/24      | 10.0.12.2
 192.168.3.0/24      | 10.0.12.2
 10.0.23.0/30        | 10.0.12.2
-
+```
 ## Router-2
-
+```
 Destination Network  | Next Hop
 192.168.1.0/24       | 10.0.12.1
 192.168.3.0/24       | 10.0.23.1
-
+```
 ## R-Warehouse
-
+```
 Destination Network | Next Hop
 192.168.1.0/24      | 10.0.23.2
 192.168.2.0/24      | 10.0.23.2
 10.0.12.0/30        | 10.0.23.2
-
+```
 
 ## Troubleshooting and Problem Resolution
 
@@ -105,12 +105,12 @@ The error indicated that a request reached its destination, but the reply could 
 
 ## Resolution
 Added the following static route on R-Warehouse
-
+```
 Setting      | Value
 Destination  | 10.0.12.0/30
 Next Hop     | 10.0.23.2
 Interface    | Gi0/0
-
+```
 
 After adding the route, the ping test from R-Warehouse to the Head Office WAN interface (10.0.12.1) succeeded and the asymmetric reachability validation error subsequently disappeared.
 
